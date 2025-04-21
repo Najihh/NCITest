@@ -73,7 +73,7 @@ tasks.register<ExecOperationsTask>("runOptionalCriteriaTest") {
 
 tasks.register<ExecOperationsTask>("runAllTest") {
     doFirst {
-        execOperations.exec() {
+        execOperations.exec {
             commandLine("./gradlew", "test")
             args("--continue", "-q")
         }
